@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Find Your Home on Florida’s Gulf Coast</title>
+<meta name="description" content="Find the Florida Gulf Coast area that best fits your lifestyle and home search." />
+<style>
+:root{--navy:#0d2235;--navy2:#16364e;--gold:#c7a25a;--cream:#f7f3eb;--white:#fff;--ink:#15202b;--muted:#64707a;--card:rgba(10,28,43,.78)}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;background:var(--navy);color:#fff}button,input,textarea{font:inherit}
+.app{min-height:100vh;position:relative;overflow:hidden}.bg{position:fixed;inset:0;background-size:cover;background-position:center;transition:background-image .35s ease,filter .35s ease;z-index:0}.bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,20,32,.88),rgba(6,20,32,.58) 55%,rgba(6,20,32,.72))}
+.shell{position:relative;z-index:2;min-height:100vh;display:flex;flex-direction:column}.topbar{display:flex;align-items:center;justify-content:space-between;padding:18px clamp(18px,4vw,54px)}.logo{width:min(250px,44vw);max-height:74px;object-fit:contain;object-position:left center}.topExp{width:105px;max-height:48px;object-fit:contain;object-position:right center}.topbar.resultMode{justify-content:space-between}.topbar.resultMode .topExp{object-position:right center}.progressWrap{width:min(330px,42vw)}.progressText{font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-align:right;margin-bottom:6px;opacity:.88}.progress{height:5px;background:rgba(255,255,255,.2);border-radius:99px;overflow:hidden}.progress>div{height:100%;width:0;background:var(--gold);transition:width .25s ease}
+.main{flex:1;display:grid;place-items:center;padding:20px clamp(18px,5vw,72px) 44px}.panel{width:min(820px,100%);background:var(--card);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:clamp(24px,5vw,52px);box-shadow:0 24px 70px rgba(0,0,0,.28)}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:34px;align-items:center;text-align:left;max-width:760px;margin:0 auto}.heroMain{display:flex;flex-direction:column;align-items:flex-start}.heroMedia{display:flex;flex-direction:column;align-items:center}.heroMedia .byline{font-size:25px;font-family:Georgia,'Times New Roman',serif;line-height:1.1}.hero .portrait{justify-self:end}.hero h1{max-width:560px}.heroStart{width:min(360px,100%);margin-top:18px;font-size:17px}.portrait{width:100%;max-width:280px;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;border-radius:18px;border:2px solid rgba(199,162,90,.65);justify-self:end}.eyebrow{color:#f1d79f;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12px;margin-bottom:12px}h1,h2{font-family:Georgia,'Times New Roman',serif;margin:0 0 14px;line-height:1.04}h1{font-size:clamp(38px,6vw,68px)}h2{font-size:clamp(30px,5vw,48px)}p{font-size:clamp(16px,2vw,19px);line-height:1.55;color:rgba(255,255,255,.9);margin:0 0 22px}.options{display:grid;gap:12px;margin-top:24px}.option,.primary,.secondary,.back{border:0;border-radius:14px;cursor:pointer;transition:.18s ease}.option{padding:16px 18px;text-align:left;background:rgba(255,255,255,.95);color:var(--ink);font-weight:700;border:2px solid transparent}.option:hover,.option:focus{transform:translateY(-1px);border-color:var(--gold);outline:none}.primary{padding:15px 22px;background:var(--gold);color:#102334;font-weight:800}.primary:hover{filter:brightness(1.06)}.secondary{padding:14px 20px;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.back{background:transparent;color:#fff;padding:8px 0;text-decoration:underline;text-underline-offset:4px}.back[hidden]{display:none}.questionNo{font-size:13px;color:#f1d79f;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}.hint{font-size:13px;color:rgba(255,255,255,.7);margin-top:10px}.keepTogether{white-space:nowrap}.amenitiesTitle{font-size:clamp(29px,4.2vw,43px);line-height:1.08;max-width:720px}.textarea{width:100%;min-height:150px;border-radius:14px;border:2px solid transparent;padding:16px;color:var(--ink);resize:vertical}.textarea:focus{outline:none;border-color:var(--gold)}
+.byline{margin-top:12px;font-size:19px;font-weight:700;letter-spacing:.02em;color:rgba(255,255,255,.94);text-align:center}.expLogo{display:block;width:92px;max-height:42px;object-fit:contain}.contactSig{text-align:left;margin-top:12px;font-size:14px;line-height:1.65;color:rgba(255,255,255,.9)}.contactSig a{color:#fff;text-decoration:none}.contactSig a:hover{text-decoration:underline}
+.resultTop{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px;align-items:start}.resultLead{grid-column:1/-1}.resultLead h2{margin-bottom:4px}.rankings,.reasons{display:grid;grid-template-rows:repeat(3,minmax(82px,auto));gap:12px;margin:12px 0 0}.rank{padding:15px 16px;border-radius:14px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);display:flex;flex-direction:column;justify-content:center}.rank strong{display:block;font-family:Georgia,serif;font-size:22px;margin-top:3px}.rank small{color:#f1d79f;text-transform:uppercase;letter-spacing:.09em}.reason{background:rgba(255,255,255,.1);padding:13px 15px;border-radius:12px;border-left:3px solid var(--gold);display:flex;align-items:center;line-height:1.35}
+.resultBottom{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:end;margin-top:24px;padding-top:22px;border-top:1px solid rgba(255,255,255,.22)}.resultLeft{display:flex;flex-direction:column;min-width:0}.summary{margin:0;padding:0;border:0}.summary dl{display:grid;grid-template-columns:max-content minmax(110px,1fr) max-content minmax(70px,.55fr);gap:8px 14px;margin:12px 0 0}.summary dt{color:#f1d79f;font-weight:700}.summary dd{margin:0}.closing{font-family:Georgia,'Times New Roman',serif;font-size:clamp(18px,2.2vw,22px);line-height:1.42;margin:22px 0 0;color:#fff}.bottomActions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;align-items:center}.bottomActions button{white-space:nowrap}.resultIdentity{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;align-self:end}.resultPhoto{width:100%;max-width:245px;border-radius:18px;aspect-ratio:4/5;object-fit:cover;object-position:center top;border:2px solid rgba(199,162,90,.65)}.resultIdentity .byline{text-align:left;font-size:24px;line-height:1.15;margin-top:12px;font-family:Georgia,'Times New Roman',serif}.resultPhoto{object-position:center 16%}.emailConsent{font-size:11px;line-height:1.45;color:rgba(255,255,255,.68);margin-top:8px;max-width:560px}.emailBox{display:none;margin-top:14px}.emailBox.show{display:flex;gap:10px;flex-wrap:wrap}.emailBox input{flex:1;min-width:220px;padding:13px;border-radius:12px;border:0}.status{font-size:13px;margin-top:8px;color:#f1d79f}
+@media(max-width:720px){.topbar{align-items:flex-start}.progressWrap{width:42%}.hero,.resultTop,.resultBottom{grid-template-columns:1fr}.hero{text-align:left}.heroMedia{align-items:flex-start}.portrait,.resultPhoto{max-width:220px;justify-self:start}.panel{border-radius:20px}.logo{width:176px}.topExp{width:82px}.summary dl{grid-template-columns:max-content 1fr}.summary dd{margin-bottom:5px}.bottomActions{display:grid}.bottomActions button{width:100%}.rankings,.reasons{grid-template-rows:none}.resultTop{gap:8px}.resultLead{grid-column:auto}.reasons{margin-top:0}.resultIdentity{margin-top:4px}}
+</style>
+</head>
+<body>
+<div class="app"><div class="bg" id="bg"></div><div class="shell">
+<header class="topbar"><img class="logo" id="brandLogo" src="assets/fgcg-logo-white.svg" alt="Florida Gulf Coast Guide"><img class="topExp" id="topExp" src="https://expknowledgebase.exprealty.com/hs-fs/hubfs/eXp%20Realty%20-%20White.png?height=48&amp;name=eXp+Realty+-+White.png" alt="eXp Realty"><div class="progressWrap" id="progressWrap" hidden><div class="progressText" id="progressText"></div><div class="progress"><div id="progressBar"></div></div></div></header>
+<main class="main"><section class="panel" id="panel"></section></main>
+</div></div>
+<script>
+const BOOK_URL='https://calendar.app.google/5xtMmGSY9kCY5NRk7';
+const IMG={
+ intro:'assets/gulf-beach.jpg',
+ beach:'assets/gulf-beach.jpg',
+ jobs:'assets/tampa.jpg',
+ development:'assets/community-golf.jpg',
+ dining:'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=82',
+ airport:'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1800&q=82',
+ pace:'assets/preserve.jpg',
+ home:'assets/home.jpg',
+ resultTampa:'assets/tampa.jpg',
+ resultParrish:'assets/preserve.jpg',
+ resultLWR:'assets/community-golf.jpg',
+ resultSarasota:'assets/sarasota.jpg',
+ resultWellen:'assets/gulf-beach.jpg'
+};
+const areas=['Tampa Bay','Parrish','Lakewood Ranch','Sarasota','Venice / Wellen Park'];
+const Q=[
+ {id:'beach',title:'Is being close to Gulf Coast beaches important to you?',img:'beach',opts:[['Very important',[0,1,2,4,4]],['Somewhat important',[0,1,2,2,2]],['Not important',[1,1,1,0,0]],['Not sure',[0,0,0,0,0]]]},
+ {id:'jobs',title:'Is being close to a major job market important to you?',img:'jobs',opts:[['Very important',[4,2,2,4,1]],['Somewhat important',[2,1,1,2,1]],['Not important',[0,1,1,0,1]],['Not sure',[0,0,0,0,0]]]},
+ {id:'development',title:'Which area development stage appeals most to you?',img:'development',opts:[['Older and established',[4,0,1,3,2]],['Newer but mature',[1,1,4,3,2]],['Still developing',[0,2,2,1,4]],['Earlier stages of major growth',[0,4,2,0,2]],['Not sure',[0,0,0,0,0]]]},
+ {id:'amenities',title:'Is being close to restaurants, shopping, <span class="keepTogether">and entertainment</span> important to you?',img:'dining',opts:[['Very important',[4,1,3,4,2]],['Somewhat important',[2,1,2,2,1]],['Not important',[0,3,1,0,2]],['Not sure',[0,0,0,0,0]]]},
+ {id:'airport',title:'Do you need easy access to a major airport?',img:'airport',opts:[['Very important',[4,2,3,3,1]],['Somewhat important',[2,2,2,2,1]],['Not important',[0,1,0,0,1]],['Not sure',[0,0,0,0,0]]]},
+ {id:'pace',title:'Which pace of life feels right for you?',img:'pace',opts:[['Urban / active',[4,0,1,3,1]],['Suburban / master-planned',[1,3,4,2,3]],['Quieter / less urban',[0,4,2,1,4]],['Not sure',[0,0,0,0,0]]]},
+ {id:'budget',title:'What price range are you considering?',img:'home',profile:true,opts:['Under $400K','$400K–$500K','$500K–$600K','$600K–$750K','$750K–$1M','$1M+','Not sure yet']},
+ {id:'type',title:'What type of home are you primarily looking for?',img:'home',profile:true,opts:['Single-family home','Villa / paired home','Townhome / condo','Open to different options','Not sure yet']},
+ {id:'beds',title:'How many bedrooms are you looking for?',img:'home',profile:true,opts:['2+','3+','4+','5+','Not sure yet']},
+ {id:'baths',title:'How many bathrooms are you looking for?',img:'home',profile:true,opts:['2+','3+','4+','Not sure yet']},
+ {id:'notes',title:'Anything else we should know?',img:'home',text:true}
+];
+let idx=-1, answers={}, scores=Array(areas.length).fill(0), history=[];
+const panel=document.getElementById('panel'),bg=document.getElementById('bg'),pw=document.getElementById('progressWrap'),pt=document.getElementById('progressText'),pb=document.getElementById('progressBar');
+function setBg(k){bg.style.backgroundImage=`url("${IMG[k]}")`}
+function intro(){idx=-1;pw.hidden=true;document.querySelector('.topbar').classList.remove('resultMode');document.getElementById('brandLogo').hidden=false;document.getElementById('topExp').hidden=false;document.getElementById('topExp').style.marginRight='';setBg('intro');panel.innerHTML=`<div class="hero"><div class="heroMain"><h1>Find Your Home on Florida’s Gulf Coast</h1><button class="primary heroStart" onclick="go(0)">Get Started</button></div><div class="heroMedia"><img class="portrait" src="assets/guy-portrait.jpg" alt="Guy Golan"><div class="byline">Guy Golan</div></div></div>`}
+function go(n){idx=n;if(idx>=Q.length){result();return}renderQ()}
+function renderQ(){const q=Q[idx];document.querySelector('.topbar').classList.remove('resultMode');setBg(q.img);document.getElementById('brandLogo').hidden=true;document.getElementById('topExp').hidden=true;pw.hidden=false;pt.textContent=`${idx+1} of ${Q.length}`;pb.style.width=`${((idx+1)/Q.length)*100}%`;let body='';if(q.text){body=`<textarea class="textarea" id="notes" placeholder="Golf, boating, lot preferences, pool, maintenance-free living, or anything else…">${answers[q.id]||''}</textarea><div class="actions"><button class="primary" onclick="saveText()">See My Results</button></div>`}else{const opts=q.profile?q.opts:q.opts.map(x=>x[0]);body=`<div class="options">${opts.map((o,i)=>`<button class="option" onclick="choose(${i})">${o}</button>`).join('')}</div>`}panel.innerHTML=`<div class="questionNo">${q.profile?'Your home search':'Area match'} · Question ${idx+1}</div><h2 class="${q.id==='amenities'?'amenitiesTitle':''}">${q.title}</h2>${body}<div class="actions"><button class="back" onclick="back()">← Back</button></div>`}
+function choose(i){const q=Q[idx];history.push({idx,prev:answers[q.id]});if(q.profile){answers[q.id]=q.opts[i]}else{answers[q.id]=q.opts[i][0];scores=scores.map((s,j)=>s+q.opts[i][1][j])}go(idx+1)}
+function saveText(){answers.notes=document.getElementById('notes').value.trim();go(idx+1)}
+function recompute(){scores=Array(areas.length).fill(0);Q.filter(q=>!q.profile&&!q.text).forEach(q=>{const a=answers[q.id];const found=q.opts.find(x=>x[0]===a);if(found)scores=scores.map((s,j)=>s+found[1][j])})}
+function back(){if(idx===0){intro();return}idx--;renderQ()}
+function reasonsFor(top){
+ const a=answers,r=[];
+ const add=(cond,text)=>{if(cond&&!r.includes(text))r.push(text)};
+ add((a.beach==='Very important'||a.beach==='Somewhat important') && [2,3,4].includes(top),'Your preference for Gulf beach access helped move this area higher.');
+ add((a.jobs==='Very important'||a.jobs==='Somewhat important') && [0,3].includes(top),'Access to a major employment market aligns well with what you told us.');
+ add(a.development==='Older and established' && [0,3].includes(top),'You prefer a more established setting.');
+ add(a.development==='Newer but mature' && [2,3].includes(top),'You like newer areas that already feel mature and established.');
+ add(a.development==='Still developing' && top===4,'You are comfortable with an area that is still evolving and adding new development.');
+ add(a.development==='Earlier stages of major growth' && top===1,'Your interest in an earlier-stage growth area points strongly toward Parrish.');
+ add((a.amenities==='Very important'||a.amenities==='Somewhat important') && [0,2,3].includes(top),'Dining, shopping and entertainment access are important in your search.');
+ add((a.airport==='Very important'||a.airport==='Somewhat important') && [0,2,3].includes(top),'Airport access fits the priorities you selected.');
+ add(a.pace==='Urban / active' && [0,3].includes(top),'You leaned toward a more active, connected lifestyle.');
+ add(a.pace==='Suburban / master-planned' && [1,2,4].includes(top),'You prefer a suburban or master-planned environment.');
+ add(a.pace==='Quieter / less urban' && [1,4].includes(top),'A quieter, less-urban setting is one of your strongest preferences.');
+ return r.slice(0,3)
+}
+function result(){
+ recompute();pw.hidden=true;document.querySelector('.topbar').classList.add('resultMode');document.getElementById('brandLogo').hidden=false;document.getElementById('topExp').hidden=false;document.getElementById('topExp').style.marginRight='';
+ const order=scores.map((s,i)=>({s,i})).sort((a,b)=>b.s-a.s);
+ const top=order[0].i, second=order[1].i, third=order[2].i;
+ const rs=reasonsFor(top);
+ const resultBgs=['resultTampa','resultParrish','resultLWR','resultSarasota','resultWellen'];setBg(resultBgs[top]);
+ const ranking=[top,second,third].map((i,n)=>`<div class="rank"><small>${n===0?'#1 · Your Best Fit':n===1?'#2 · Also Consider':'#3 · Another Option'}</small><strong>${areas[i]}</strong></div>`).join('');
+ const displayReasons=[...rs]; while(displayReasons.length<3) displayReasons.push(displayReasons.length===0?'Your answers point strongly toward this area based on the preferences you shared.':'This recommendation reflects the overall balance of the priorities you selected.'); const reasonCards=displayReasons.slice(0,3).map(x=>`<div class="reason">${x}</div>`).join('');
+ panel.innerHTML=`<div class="resultTop"><div class="resultLead"><div class="eyebrow">Your Results</div><h2>${areas[top]}</h2></div><div class="rankings">${ranking}</div><div class="reasons">${reasonCards}</div></div><div class="resultBottom"><div class="resultLeft"><div class="summary"><div class="eyebrow">Your Home Search</div><dl><dt>Budget</dt><dd>${answers.budget||'Not sure yet'}</dd><dt>Bedrooms</dt><dd>${answers.beds||'Not sure yet'}</dd><dt>Home type</dt><dd>${answers.type||'Not sure yet'}</dd><dt>Bathrooms</dt><dd>${answers.baths||'Not sure yet'}</dd>${answers.notes?`<dt>Other priorities</dt><dd>${esc(answers.notes)}</dd>`:''}</dl></div><p class="closing">This is just a starting point based on your preferences. Book a call to continue the conversation. There’s much more to explore.</p><div class="bottomActions"><button class="primary" onclick="window.open(BOOK_URL,'_blank')">Book a Call with Guy</button><button class="secondary" onclick="toggleEmail()">Email Me My Results</button><button class="secondary" onclick="restart()">Retake</button></div><div class="emailBox" id="emailBox"><input id="email" type="email" placeholder="you@example.com" aria-label="Email address"><button class="primary" onclick="emailResults('${encodeURIComponent(areas[top])}')">Prepare Email</button></div><div class="status" id="status"></div></div><div class="resultIdentity"><img class="resultPhoto" src="assets/guy-portrait.jpg" alt="Guy Golan"><div class="byline">Guy Golan</div><div class="contactSig"><a href="mailto:guy@floridagulfcoastguide.com">guy@floridagulfcoastguide.com</a><br><a href="tel:+13019196726">301-919-6726</a></div></div></div>`
+}
+function esc(s){return s.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function toggleEmail(){document.getElementById('emailBox').classList.toggle('show')}
+function emailResults(nameEnc){
+ const email=document.getElementById('email').value.trim();
+ if(!email||!email.includes('@')){document.getElementById('status').textContent='Enter a valid email address.';return}
+ const name=decodeURIComponent(nameEnc);
+ const order=scores.map((s,i)=>({s,i})).sort((a,b)=>b.s-a.s);
+ const top3=order.slice(0,3).map((x,n)=>`${n+1}. ${areas[x.i]}`).join('\n');
+ const rs=reasonsFor(order[0].i);
+ const reasonText=rs.length?`\nWhy it matched:\n${rs.map(x=>`• ${x}`).join('\n')}\n`:'';
+ const body=`Thank you for taking the time to fill out your information!\n\n${top3}${reasonText}\nYour Home Search\nPrice range: ${answers.budget||'Not sure yet'}\nHome type: ${answers.type||'Not sure yet'}\nBedrooms: ${answers.beds||'Not sure yet'}\nBathrooms: ${answers.baths||'Not sure yet'}\nAnything else: ${answers.notes||'—'}\n\nThis is just a starting point based on your preferences. Book a call to continue the conversation. There’s much more to explore.\n\nGuy Golan\neXp Realty\n301-919-6726\nguy@floridagulfcoastguide.com\n\nBook a Call: ${BOOK_URL}`;
+ const subject='Your Florida Gulf Coast Area Search Results';
+ window.location.href=`mailto:${encodeURIComponent(email)}?bcc=${encodeURIComponent('guy@floridagulfcoastguide.com')}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+ document.getElementById('status').textContent='Your email app should open with your results prepared.'
+}
+function restart(){answers={};scores=Array(areas.length).fill(0);history=[];intro()}
+intro();
+</script>
+</body>
+</html>
